@@ -7,14 +7,12 @@ const subtract = function(a, b) {
 };
 
 const sum = function(a) {
-	a.reduce((previous, current) => {
-	 return previous + current;
-	}, initial)
-  return initial
+if (a.length == 0) {return 0} else {
+return a.reduce((product, current) => product + current)}
 };
 
-const multiply = function(a,b) {
-  return a * b;
+const multiply = function(a) {
+return a.reduce((product, current) => product * current)
 };
 
 const power = function(a,b) {
@@ -22,14 +20,9 @@ const power = function(a,b) {
 };
 
 const factorial = function(a) {
-	let i = 0
-  let j = 0
-  let k = 0
-  while (a < 0) {
-    j = a;
-    a--;
-    k = j*a;
-    i+=k;
+  let i = 1;
+  for (let j=a; j>0; j--) {
+    i*=j;
   }
   return i;
 };
